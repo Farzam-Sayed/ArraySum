@@ -4,7 +4,6 @@
  *Developed by emasoftware (emasoftware.altervista.org)
 */
 #include <iostream>
-#include <fstream>
 
 using namespace std;
 
@@ -13,17 +12,16 @@ bool ArrayValue(int array[], int k, int size)
     int sum=0,find;
     for ( int i=0 ; i< size ; i++)
     {
-        for ( int c =0 ; c< size; c++)
+        for ( int c =0 ; c< i; c++)
         {
-            if(i!=c)
-            {
+          
                 sum = array[i]+array[c];
                 if(sum == k ) 
                 {
                     cout << " Find at ["<<i<<"] +  array ["<<c<<"] = " << k << endl ; 
                     find++;
                 }
-            }
+            
         }
     }
     if(find!=0)
